@@ -1,6 +1,7 @@
 # Lista de Tareas
 
-Este es un proyecto simple para gestionar una lista de tareas en TypeScript.
+Este es un proyecto simple para gestionar una lista de tareas en TypeScript y HTML.
+el TypeScript esta en la carpeta src y el html en la carpeta dist ( en esta carpeta esta tambien un archivo js necesario para su ejecución). 
 
 ## Requisitos
 
