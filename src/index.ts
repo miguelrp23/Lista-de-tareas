@@ -1,7 +1,6 @@
 
-
 // clases
-export class Tarea {
+ class Tarea {
     nombre: string;
     hecho: boolean;
   
@@ -12,7 +11,7 @@ export class Tarea {
   }
   
   // el array para guardar las tareas
-  export class ListaTareas {
+  class ListaTareas {
     tareas: Tarea[] = [];
   
     // agregar una tarea al array

@@ -83,4 +83,3 @@ function renderizarTareas() {
         listaTareasElemento.appendChild(tareaElemento);
     });
 }
-//# sourceMappingURL=index.js.map
