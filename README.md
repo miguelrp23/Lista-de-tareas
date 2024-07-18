@@ -14,4 +14,15 @@ el TypeScript esta en la carpeta src y el html en la carpeta dist ( en esta carp
 
    bash
    git clone https://github.com/tu-usuario/tu-repositorio.git
+
+2. instalacion del jest con el comando "npm install --save-dev jest"
+
+3. con el comando "npm test" ejecutas los test aue tiene el codigo,
+   se ejecutaran correctamente si tienes el jest instalado 
+
+4. paras ejecutar el programa es recomendable tener una extención en el 
+   visual studio code, que es el "Live Server", asegurate que en la parte
+   inferior derecha aparezca un boton que diga " Go Live " y cuando lo oprimas asegurate que estas en el archivo "html"
+
+5. teniendo todo esto se podra ejecutar todo el codigo correctamente 
    

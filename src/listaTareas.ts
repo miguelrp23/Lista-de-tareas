@@ -1,36 +1,27 @@
 
-class Tarea {
-    nombre: string;
-    hecho: boolean;
-  
-    constructor(nombre: string) {
-      this.nombre = nombre;
-      this.hecho = false;
-    }
+export class TaskList {
+  tasks: { name: string; done: boolean }[];
+
+  constructor() {
+    this.tasks = [];
   }
-  
- export class ListaTareas {
-    tareas: Tarea[] = [];
-  
-   
-    agregarTarea(nombre: string) {
-      this.tareas.push(new Tarea(nombre));
-    }
-  
- 
-    eliminarTarea(indice: number) {
-      if (indice >= 0 && indice < this.tareas.length) {
-        this.tareas.splice(indice, 1);
-      } else {
-        console.error("Índice fuera de los límites");
-      }
-    }
-  
-    alternarTarea(indice: number) {
-      if (indice >= 0 && indice < this.tareas.length) {
-        this.tareas[indice].hecho = !this.tareas[indice].hecho;
-      } else {
-        console.error("Índice fuera de los límites");
-      }
-    }
+
+  addTask(name: string) {
+    this.tasks.push({ name, done: false });
   }
+
+  removeTask(index: number) {
+    if (index < 0 || index >= this.tasks.length) {
+      throw new Error('Index out of bounds');
+    }
+    this.tasks.splice(index, 1);
+  }
+
+  toggleTask(index: number) {
+    if (index < 0 || index >= this.tasks.length) {
+      throw new Error('Index out of bounds');
+    }
+    this.tasks[index].done = !this.tasks[index].done;
+  }
+}
+

@@ -1,35 +1,25 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ListaTareas = void 0;
-class Tarea {
-    constructor(nombre) {
-        this.nombre = nombre;
-        this.hecho = false;
-    }
-}
-class ListaTareas {
+exports.TaskList = void 0;
+class TaskList {
     constructor() {
-        this.tareas = [];
+        this.tasks = [];
     }
-    agregarTarea(nombre) {
-        this.tareas.push(new Tarea(nombre));
+    addTask(name) {
+        this.tasks.push({ name, done: false });
     }
-    eliminarTarea(indice) {
-        if (indice >= 0 && indice < this.tareas.length) {
-            this.tareas.splice(indice, 1);
+    removeTask(index) {
+        if (index < 0 || index >= this.tasks.length) {
+            throw new Error('Index out of bounds');
         }
-        else {
-            console.error("Índice fuera de los límites");
-        }
+        this.tasks.splice(index, 1);
     }
-    alternarTarea(indice) {
-        if (indice >= 0 && indice < this.tareas.length) {
-            this.tareas[indice].hecho = !this.tareas[indice].hecho;
+    toggleTask(index) {
+        if (index < 0 || index >= this.tasks.length) {
+            throw new Error('Index out of bounds');
         }
-        else {
-            console.error("Índice fuera de los límites");
-        }
+        this.tasks[index].done = !this.tasks[index].done;
     }
 }
-exports.ListaTareas = ListaTareas;
+exports.TaskList = TaskList;
 //# sourceMappingURL=listaTareas.js.map

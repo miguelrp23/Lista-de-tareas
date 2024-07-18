@@ -13,6 +13,11 @@
     "@types/jest": "^27.0.1",
     "jest": "^27.0.6",
     "ts-jest": "^27.0.5",
-    "typescript": "^4.3.5"
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@types/node": "^20.14.11",
+    "commander": "^12.1.0",
+    "ts-node": "^10.9.2"
   }
 }
